@@ -1,33 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Items List</title>
+    <meta charset="UTF-8">
+    <title>Lost & Found Items</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+<nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="lost.html">Report Lost</a>
+    <a href="found.html">Report Found</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
 <img src="logo.png" class="logo">
 
-    <h1>Lost & Found Items (Prototype)</h1>
+<h1>Lost & Found Items</h1>
 
-    <div class="item">
-        <h3>Black Water Bottle</h3>
-        <p><b>Status:</b> Lost</p>
-        <p><b>Location:</b> Near CSE Block</p>
-    </div>
+<!-- LOST ITEMS SECTION -->
+<h2>Lost Items Reported</h2>
+<iframe 
+    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSthOy-8WITH6qNvzHwypiPGlIfPVNWXbazaAvLF5F01vVlOkdJM96BvTWfUIf6-WT7JIJ1TNZhkx34/pubhtml"
+    width="100%"
+    height="500"
+    frameborder="0">
+</iframe>
 
-    <div class="item">
-        <h3>ID Card</h3>
-        <p><b>Status:</b> Found</p>
-        <p><b>Location:</b> Library</p>
-    </div>
+<!-- FOUND ITEMS SECTION -->
+<h2>Found Items Reported</h2>
+<iframe 
+    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRiYwBuitrlumpWpjdvLA-FM2CO7CUrtp5TH26Q8xYovhVzfuQqXvG4M0mAGHiFm_xndjq8OOz8rEJK/pubhtml"
+    width="100%"
+    height="500"
+    frameborder="0">
+</iframe>
 
-    <div class="item">
-        <h3>Calculator</h3>
-        <p><b>Status:</b> Lost</p>
-        <p><b>Location:</b> Classroom 204</p>
-    </div>
-
-    <a href="index.html" class="back">← Back to Home</a>
+<a href="index.html" class="back">← Back to Home</a>
 
 </body>
 </html>

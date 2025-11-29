@@ -1,3 +1,12 @@
+body {
+    animation: fade 0.6s ease-in;
+}
+
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 /* Background and body */
 body {
     background: linear-gradient(135deg, #fff9c4, #ffe082, #ffd180);
@@ -20,6 +29,27 @@ body {
 }
 
 .nav a {
+
+    .nav a {
+    position: relative;
+    transition: 0.3s;
+}
+
+.nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background: #000;
+    transition: 0.3s ease;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
     text-decoration: none;
     font-weight: bold;
     color: #5a4a00;
@@ -48,10 +78,11 @@ body {
 
 /* Headings */
 h1 {
-    text-align: center;
-    color: #4e3c00;
-    margin-bottom: 10px;
+    background: linear-gradient(to right, #ffdd28, #ffb700);
+    -webkit-background-clip: text;
+    color: transparent;
 }
+
 
 p {
     text-align: center;
@@ -61,20 +92,20 @@ p {
 
 /* Item Box */
 .item {
-    background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(5px);
+    background: white;
     padding: 20px;
     margin: 20px auto;
     width: 70%;
-    border-radius: 15px;
-    border-left: 6px solid #ff9800;
-    box-shadow: 0px 4px 15px rgba(0,0,0,0.15);
+    border-radius: 12px;
+    border-left: 6px solid #ffce00;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+.item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
 
-.item h2 {
-    margin-bottom: 10px;
-    color: #4e3c00;
-}
 
 /* Buttons */
 .btn {
@@ -161,4 +192,13 @@ button:hover {
 
 .back:hover {
     color: #ff6f00;
+}
+
+.btn {
+    transition: 0.3s ease;
+}
+.btn:hover {
+    background: #ffce00;
+    color: black;
+    transform: scale(1.07);
 }
